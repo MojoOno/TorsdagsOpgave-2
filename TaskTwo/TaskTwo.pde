@@ -12,12 +12,9 @@ void setup() {
   } else {
     println("I don't clap my hands");
   }
-  gradeSum(7, 10);
-  name = upperCaseName("Franck");
-  println(name);
-  letter = capitalFirstLetter("Velkommen til");
-  println(letter);
-  
+  println(gradeSum(7, 10));
+  println(upperCaseName("Franck"));
+  println(capitalFirstLetter("Velkommen til"));
 }
 
 boolean iAmHappy() {
@@ -30,7 +27,6 @@ boolean iAmHappy() {
 //2.b
 
 int gradeSum(int gradeA, int gradeB) {
-  println(gradeA + gradeB);
   return gradeA + gradeB;
 }
 
@@ -48,6 +44,9 @@ String upperCaseName(String name) {
 //2.d
 
 boolean capitalFirstLetter(String letter) {
-  letter.charAt(0);
-  return true;
+
+  char firstChar = letter.charAt(0);
+  boolean isUpper = Character.isUpperCase(firstChar);
+
+  return isUpper;
 }
